@@ -32,7 +32,7 @@ def area_rectangulo(ancho: float, largo: float) -> float:
     return ancho * largo
 
 # ------------------------------------------------------------
-# 01 · Cálculo del promedio
+# 02 · Cálculo del promedio
 # Desarrolla un programa que calcule el promedio de tres números 
 # ingresados por el usuario.
 # ------------------------------------------------------------
@@ -52,3 +52,21 @@ def calcular_promedio(
         El promedio aritmético de los tres números.
     """
     return (primer_numero + segundo_numero + tercer_numero) / 3
+
+# ------------------------------------------------------------
+# 03 · Cálculo del Índice de Masa Corporal (IMC)
+# Desarrolla un programa que calcule el Índice de Masa Corporal 
+# de una persona. El programa debe solicitar al usuario su peso 
+# en kilogramos y su altura en metros.
+# ------------------------------------------------------------
+def indice_masa_corporal(peso_kg: float, altura_metros: float) -> float:
+    """Calcula el IMC a partir del peso y la altura.
+
+    Args:
+        peso_kg: Peso de la persona en kilogramos.
+        altura_metros: Altura de la persona en metros.
+
+    Returns:
+        El índice de masa corporal en kg/m².
+    """
+    return peso_kg / (altura_metros ** 2)
