@@ -2,7 +2,7 @@
 # ACTIVIDAD 3: Programas Básicos en Python
 # ============================================================
 
-# Variables contastes
+# Variables constantes
 TASA_IMPUESTO = 0.16
 
 # ============================================================
