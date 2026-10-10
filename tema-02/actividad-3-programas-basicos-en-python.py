@@ -1,5 +1,12 @@
 # ============================================================
-# Actividad 3: Programas Básicos en Python
+# ACTIVIDAD 3: Programas Básicos en Python
+# ============================================================
+
+# Variables contastes
+TASA_IMPUESTO = 0.16
+
+# ============================================================
+# FUNCIONES: cada una recibe datos y devuelve un resultado.
 # ============================================================
 
 # 1. Área de un rectángulo
@@ -65,3 +72,59 @@ def salario_neto(
     """
     monto_impuestos = salario_bruto_mensual * (porcentaje_impuestos / 100)
     return salario_bruto_mensual - monto_impuestos - deducciones_adicionales
+
+# ============================================================
+# INTERFAZ DE CONSOLA
+# Solicita los datos de los cuatro ejercicios y muestra
+# los resultados calculados por sus funciones.
+# ============================================================
+def main() -> None:
+    """Ejecuta los cuatro ejercicios con datos ingresados por el usuario."""
+    print("=== Actividad 3: Programas Básicos en Python ===")
+
+    # 1. Área de un rectángulo
+    print("\n1. Área de un rectángulo")
+    ancho = float(input("Ancho: "))
+    largo = float(input("Largo: "))
+    print(f"Área: {area_rectangulo(ancho, largo):.2f} unidades²")
+
+    # 2. Promedio de tres números
+    print("\n2. Promedio de tres números")
+    primer_numero = float(input("Primer número: "))
+    segundo_numero = float(input("Segundo número: "))
+    tercer_numero = float(input("Tercer número: "))
+    promedio = calcular_promedio(primer_numero, segundo_numero, tercer_numero)
+    print(f"Promedio: {promedio:.2f}")
+
+    # 3. Índice de masa corporal
+    print("\n3. Índice de masa corporal")
+    peso_kg = float(input("Peso en kilogramos: "))
+    altura_metros = float(input("Altura en metros: "))
+    imc = indice_masa_corporal(peso_kg, altura_metros)
+    print(f"IMC: {imc:.2f} kg/m²")
+
+    # 4. Salario neto mensual
+    print("\n4. Salario neto mensual")
+    print(f"La tasa de impuesto actual es del: {TASA_IMPUESTO:.2F}%")
+    salario_bruto_mensual = float(input("Salario bruto mensual: "))
+    porcentaje_impuestos = TASA_IMPUESTO
+    deducciones_adicionales = float(input("Deducciones adicionales: "))
+    resultado = salario_neto(
+        salario_bruto_mensual,
+        porcentaje_impuestos,
+        deducciones_adicionales,
+    )
+    print(f"Salario neto mensual: {resultado:.2f}")
+
+# ============================================================
+# PUNTO DE ENTRADA
+# Inicia la interacción solo al ejecutar este archivo directamente.
+# ============================================================
+if __name__ == "__main__":
+    main()
+    
+
+    
+    
+
+    
