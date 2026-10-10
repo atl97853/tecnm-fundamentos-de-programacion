@@ -122,9 +122,19 @@ def main() -> None:
 # ============================================================
 if __name__ == "__main__":
     main()
-    
 
-    
-    
-
-    
+# ============================================================
+# REFERENCIAS
+# Lecturas para repasar los conceptos utilizados en esta actividad.
+# ============================================================
+# Docstrings:
+# https://realpython.com/ref/best-practices/docstrings/
+#
+# Estilo de comentarios y docstrings:
+# https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
+#
+# Uso de if __name__ == "__main__":
+# https://realpython.com/if-name-main-python/#frequently-asked-questions
+#
+# Formato de texto con f-strings:
+# https://www.geeksforgeeks.org/python/formatted-string-literals-f-strings-python/
