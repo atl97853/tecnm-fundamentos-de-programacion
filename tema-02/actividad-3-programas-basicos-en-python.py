@@ -13,7 +13,6 @@
 # Python y Git.
 # ============================================================
 
-
 # ------------------------------------------------------------
 # 01 · Cálculo del área de un rectángulo
 # Desarrolla un programa que permita calcular el área de un 
@@ -70,3 +69,30 @@ def indice_masa_corporal(peso_kg: float, altura_metros: float) -> float:
         El índice de masa corporal en kg/m².
     """
     return peso_kg / (altura_metros ** 2)
+
+# ------------------------------------------------------------
+# 04 · Cálculo del salario neto de un empleado
+# Desarrolla un programa que calcule el salario neto de un empleado. 
+# El programa debe solicitar:
+# Salario bruto mensual
+# Porcentaje de impuestos
+# Deducciones adicionales
+# ------------------------------------------------------------
+def salario_neto(
+        salario_bruto_mensual: float,
+        porcentaje_impuestos: float,
+        deducciones_adicionales: float,
+    ) -> float:
+    """Calcula el salario neto mensual después de impuestos y deducciones.
+
+    Args:
+        salario_bruto_mensual: Salario mensual antes de descuentos.
+        porcentaje_impuestos: Porcentaje del salario destinado a impuestos;
+            por ejemplo, 10 representa el 10 %.
+        deducciones_adicionales: Importe de otros descuentos mensuales.
+
+    Returns:
+        Salario mensual restante después de todos los descuentos.
+    """
+    monto_impuestos = salario_bruto_mensual * (porcentaje_impuestos / 100)
+    return salario_bruto_mensual - monto_impuestos - deducciones_adicionales
