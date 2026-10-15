@@ -6,6 +6,11 @@ Descripción: Solicita tres calificaciones, calcula el promedio final
 y muestra la calificación final.
 """
 
+# Constantes
+PORCENTAJE_PARCIALES = 40
+PORCENTAJE_PROYECTO = 30
+PORCENTAJE_EXAMEN_FINAL = 30
+
 def validar_calificacion(evaluacion: str) -> int:
     """Solicita una calificación hasta obtener un número entero entre 0 y 100.
 
@@ -26,6 +31,26 @@ def validar_calificacion(evaluacion: str) -> int:
 
         if 0 <= calificacion <= 100:
             return calificacion
+
+def calcular_calificacion_final(parciales: int, proyecto:int , examen_final:int) -> int:
+    """Calcula la calificación final mediante una suma ponderada.
+
+    Args:
+        parciales: Calificación de los exámenes parciales.
+        proyecto: Calificación del proyecto.
+        examen_final: Calificación del examen final.
+
+    Returns:
+        Calificación final entera, obtenida al truncar los decimales
+        de la suma de los aportes ponderados.
+    """
+    aporte_parciales = (parciales * PORCENTAJE_PARCIALES) / 100
+    aporte_proyecto = (proyecto * PORCENTAJE_PROYECTO) / 100
+    aporte_examen_final = (examen_final * PORCENTAJE_EXAMEN_FINAL) / 100
+
+    return int(
+            aporte_parciales + aporte_proyecto + aporte_examen_final
+        )
 
 # Bloque principal
 if __name__=="__main__":
