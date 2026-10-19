@@ -24,6 +24,13 @@ def pedir_edad() -> int:
             return edad
         else:
             print("La edad debe estar entre 0 y 120 años.")
+
+def evaluar_edad_para_votar(edad_usuario: int) -> str:
+    """Indica si el usuario cumple la edad mínima para votar."""
+    if edad_usuario >= EDAD_MINIMA_PARA_VOTAR:
+        return f"Tu edad: {edad_usuario}. Cumples la edad mínima para votar."
+    else:
+        return f"Tu edad: {edad_usuario}. Aún no cumples la edad mínima para votar."
         
 # Bloque principal
 if __name__ == "__main__":
