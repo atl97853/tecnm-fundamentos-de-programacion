@@ -28,7 +28,8 @@ if __name__ == "__main__":
     producto_precio = solicitar_precio_producto()
 
     # Proceso
-    precio_final = calcular_descuento_producto(producto_precio)
+    descuento = calcular_descuento_producto(producto_precio)
+    precio_final = calcular_precio_final(producto_precio, descuento)
 
     # Salida
     print(precio_final)
