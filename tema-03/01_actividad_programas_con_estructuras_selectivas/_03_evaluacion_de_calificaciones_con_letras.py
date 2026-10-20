@@ -22,6 +22,19 @@ def validar_calificacion() -> int:
         else:
             print("La calificación debe de estar entre 0 y 100.")
 
+def obtener_calificacion_alfabetica(calificacion_numerica: int) -> str:
+    """Convierte una calificación númerica de 0 a 100 en una calificación alfabética."""
+    if 90 <= calificacion_numerica <= 100:
+        return "A"
+    elif 80 <= calificacion_numerica <= 89:
+        return "B"
+    elif 70 <= calificacion_numerica <= 79:
+        return "C"
+    elif 60 <= calificacion_numerica <= 69:
+        return "D"
+    else:
+        return "F"
+
 # Bloque principal
 if __name__ == "__main__":
     # Entrada
@@ -31,4 +44,7 @@ if __name__ == "__main__":
     calificacion_alfabetica = obtener_calificacion_alfabetica(calificacion_numerica)
 
     # Salida
-    print(f"Tu calificación alfabética es: {calificacion_alfabetica}")
+    print(
+        f"Tu calificación de {calificacion_numerica} equivale "
+        f"a la letra {calificacion_alfabetica}."
+    )   
