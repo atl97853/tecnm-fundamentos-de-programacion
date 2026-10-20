@@ -1,7 +1,7 @@
 """
 Programa: Verificar edad para votar
 Autor: Atl
-Fecha: Octubre de 2026
+Fecha: Octubre, 2026
 Descripción: Solicita la edad del usuario y determina si cumple con 
 la edad mínima requerida para votar.
 """

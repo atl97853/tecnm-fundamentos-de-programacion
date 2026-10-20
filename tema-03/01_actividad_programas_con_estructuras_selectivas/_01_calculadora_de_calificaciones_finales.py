@@ -1,7 +1,7 @@
 """
 Programa: Calculadora de calificaciones finales
 Autor: Atl
-Fecha: Octubre de 2026
+Fecha: Octubre, 2026
 Descripción: Solicita tres calificaciones, calcula el promedio final
 y muestra la calificación final.
 """
