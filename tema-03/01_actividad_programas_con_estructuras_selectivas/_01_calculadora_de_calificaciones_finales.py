@@ -31,6 +31,8 @@ def validar_calificacion(evaluacion: str) -> int:
 
         if 0 <= calificacion <= 100:
             return calificacion
+        else:
+            print("La calificación debe de estar entre 0 y 100.")
 
 def calcular_calificacion_final(parciales: int, proyecto:int , examen_final:int) -> int:
     """Calcula la calificación final mediante una suma ponderada.
@@ -53,7 +55,7 @@ def calcular_calificacion_final(parciales: int, proyecto:int , examen_final:int)
         )
 
 # Bloque principal
-if __name__=="__main__":
+if __name__ == "__main__":
     # Entrada
     parciales = validar_calificacion("parciales")
     proyecto = validar_calificacion("proyecto")
