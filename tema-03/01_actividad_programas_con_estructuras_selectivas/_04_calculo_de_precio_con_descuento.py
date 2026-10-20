@@ -22,6 +22,17 @@ def solicitar_precio_producto() -> int:
         else: 
             print("El precio debe ser mayor o igual a 0.")
 
+def calcular_descuento_producto(producto_precio: int) -> int:
+    """Calcula el descuento del producto según el precio original"""
+    if producto_precio <= 100:
+        return 0
+    elif producto_precio <= 200:
+        return 10
+    elif producto_precio <= 500:
+        return 20
+    else:
+        return 25
+
 # Bloque principal
 if __name__ == "__main__":
     # Entrada
