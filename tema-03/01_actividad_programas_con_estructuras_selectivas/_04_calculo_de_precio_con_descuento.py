@@ -38,8 +38,8 @@ def calcular_precio_final(producto_precio: int, descuento: int) -> int:
     monto_descuento = producto_precio * (descuento / 100)
     return int(producto_precio - monto_descuento)
 
-# Bloque principal
-if __name__ == "__main__":
+def main() -> None:
+    """Solicita el precio y muestra el descuento aplicado y el total a pagar."""
     # Entrada
     producto_precio = solicitar_precio_producto()
 
@@ -52,3 +52,7 @@ if __name__ == "__main__":
         f"Descuento aplicado: {descuento}%\n"
         f"Total a pagar: ${precio_final}"
     )
+
+# Bloque principal
+if __name__ == "__main__":
+    main()
