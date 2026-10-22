@@ -54,8 +54,8 @@ def calcular_calificacion_final(parciales: int, proyecto:int , examen_final:int)
             aporte_parciales + aporte_proyecto + aporte_examen_final
         )
 
-# Bloque principal
-if __name__ == "__main__":
+def main() -> None:
+    """Solicita las calificaciones, calcula el promedio final y lo muestra."""
     # Entrada
     parciales = validar_calificacion("parciales")
     proyecto = validar_calificacion("proyecto")
@@ -66,3 +66,7 @@ if __name__ == "__main__":
 
     # Salida
     print(f"Tu calificación final es: {promedio_final}")
+
+# Bloque principal
+if __name__ == "__main__":
+    main()
