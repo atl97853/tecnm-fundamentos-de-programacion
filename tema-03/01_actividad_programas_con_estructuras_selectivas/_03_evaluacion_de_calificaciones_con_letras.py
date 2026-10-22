@@ -35,8 +35,8 @@ def obtener_calificacion_alfabetica(calificacion_numerica: int) -> str:
     else:
         return "F"
 
-# Bloque principal
-if __name__ == "__main__":
+def main() -> None:
+    """Solicita una calificación numérica y muestra su equivalente alfabético."""
     # Entrada
     calificacion_numerica = validar_calificacion()
     
@@ -48,3 +48,7 @@ if __name__ == "__main__":
         f"Tu calificación de {calificacion_numerica} equivale "
         f"a la letra {calificacion_alfabetica}."
     )   
+
+# Bloque principal
+if __name__ == "__main__":
+    main()
