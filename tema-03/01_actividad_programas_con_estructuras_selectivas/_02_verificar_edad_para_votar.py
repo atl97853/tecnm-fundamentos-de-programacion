@@ -31,9 +31,9 @@ def evaluar_edad_para_votar(edad_usuario: int) -> str:
         return f"Tu edad: {edad_usuario}. Cumples la edad mínima para votar."
     else:
         return f"Tu edad: {edad_usuario}. Aún no cumples la edad mínima para votar."
-        
-# Bloque principal
-if __name__ == "__main__":
+
+def main() -> None:
+    """Solicita la edad y muestra sí cumple la edad miníma para votar."""
     # Entrada
     edad_usuario = pedir_edad()
 
@@ -42,3 +42,7 @@ if __name__ == "__main__":
 
     # Salida
     print(cumple_edad_minima)
+
+# Bloque principal
+if __name__ == "__main__":
+    main()
