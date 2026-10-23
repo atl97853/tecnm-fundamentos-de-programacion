@@ -22,6 +22,21 @@ def pedir_numero_mes() -> int:
         else: 
             print("El número del mes debe estar entre 1 y 12.")
 
+def determinar_estacion(numero_mes: int) -> str:
+    """
+    Devuelve un mensaje con la estación correspondiente al mes indicado. 
+    El número de mes debe estar entre 1 y 12.
+    """
+    match numero_mes:
+        case 3 | 4 | 5:
+            return f"La estación del mes {numero_mes} es primavera."
+        case 6 | 7 | 8:
+            return f"La estación del mes {numero_mes} es verano."
+        case 9 | 10 | 11:
+            return f"La estación del mes {numero_mes} es otoño."
+        case 12 | 1 | 2:
+            return f"La estación del mes {numero_mes} es invierno."
+
 def main() -> None:
     """Solicita un número de mes y muestra la estación correspondiente."""
     # Entrada
