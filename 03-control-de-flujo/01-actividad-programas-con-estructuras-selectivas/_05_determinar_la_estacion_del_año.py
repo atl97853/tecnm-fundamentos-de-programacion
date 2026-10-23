@@ -1,7 +1,7 @@
 """
 Programa: Determinar la estación del año
 Autor: Atl
-Fecha: Octubre, 26
+Fecha: Octubre, 2026
 Descripción: Solicita al usuario un número de mes y muestra
 la estación del año correspondiente. 
 """

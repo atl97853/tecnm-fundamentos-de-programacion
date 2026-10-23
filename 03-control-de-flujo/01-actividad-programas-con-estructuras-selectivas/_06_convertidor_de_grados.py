@@ -1,7 +1,7 @@
 """
 Programa: Convertidor de grados
 Autor: Atl
-Fecha: Octubre, 26
+Fecha: Octubre, 2026
 Descripción: Convierte una temperatura en grados Celsius a grados
 Fahrenheit o kelvin, según la escala elegida por el usuario.
 """
