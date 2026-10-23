@@ -40,7 +40,7 @@ def seleccionar_escala_destino() -> str:
         str: "fahrenheit" o "kelvin", según la opción seleccionada.
     """
     while True: 
-        escala_destino = input("¿A qué escala deseas convertir? Escribe 'f' para Fahrenheit o 'k' para Kelvin: ").lower()
+        escala_destino = input("¿A qué escala deseas convertir?, escribe 'f' para Fahrenheit o 'k' para Kelvin: ").lower()
 
         match escala_destino:
             case "f":
@@ -50,6 +50,22 @@ def seleccionar_escala_destino() -> str:
             case _:
                 print("Opción no válida, intentalo de nuevo.")
                 continue
+
+def convertir_temperatura(temperatura_celsius: float, escala_destino: str) -> float:
+    """Convierte una temperatura de Celsius a Fahrenheit o kelvin.
+
+    Args:
+        temperatura_celsius (float): Temperatura en grados Celsius.
+        escala_destino (str): "fahrenheit" o "kelvin".
+
+    Returns:
+        float: Temperatura convertida a la escala seleccionada.
+    """
+    match escala_destino:
+        case "fahrenheit":
+            return temperatura_celsius * (9 / 5) + 32
+        case "kelvin":
+            return temperatura_celsius + 273.15
 
 def main() -> None:
     """Solicita la temperatura en Celsius y muestra su conversión.
@@ -65,7 +81,10 @@ def main() -> None:
     )
 
     # Salida
-    print(f"{temperatura_convertida}")
+    print(
+        f"Tu temperatura de {temperatura_celsius} °C equivale a "
+        f"{temperatura_convertida} en la escala {escala_destino.capitalize()}."
+    )
 
 # Bloque principal
 if __name__ == "__main__":
