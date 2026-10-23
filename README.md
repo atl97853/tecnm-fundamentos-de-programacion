@@ -1,4 +1,4 @@
-# Fundamentos de Programación
+# 💻 Fundamentos de Programación
 
 Repositorio de la asignatura **Fundamentos de Programación** de la carrera de Ingeniería en Sistemas Computacionales del Tecnológico Nacional de México (TecNM).
 
@@ -7,22 +7,17 @@ Repositorio de la asignatura **Fundamentos de Programación** de la carrera de I
 | Dato | Descripción |
 | --- | --- |
 | Asignatura | Fundamentos de Programación |
-| Clave | AED-1285 |
-| SATCA | 2-3-5 |
+| Clave | `AED-1285` |
+| SATCA | `2-3-5` |
 | Carrera | Ingeniería en Sistemas Computacionales |
 
 ## Competencia de la asignatura
 
-Aplica algoritmos y lenguajes de programación para diseñar e implementar soluciones a problemáticas del entorno.
+> Aplica algoritmos y lenguajes de programación para diseñar e implementar soluciones a problemáticas del entorno.
 
-## Temario
+---
 
-### 1. Diseño algorítmico
-
-- **1.1** Conceptos básicos.
-- **1.2** Representación de algoritmos: gráfica y pseudocódigo.
-- **1.3** Diseño de algoritmos.
-- **1.4** Diseño de funciones.
+## 📚 Temario
 
 ### 2. Introducción a la programación
 
