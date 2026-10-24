@@ -10,9 +10,6 @@ def pedir_temperatura_celsius() -> float:
     """Solicita y valida una temperatura en grados Celsius.
 
     Repite la solicitud hasta obtener un número mayor o igual a -273.15 °C.
-
-    Returns:
-        float: Temperatura validada en grados Celsius.
     """
     while True:
         try:
@@ -32,13 +29,7 @@ def pedir_temperatura_celsius() -> float:
             )
 
 def seleccionar_escala_destino() -> str:
-    """Solicita y valida la escala de destino para la conversión.
-
-    Repite la solicitud hasta recibir 'f' o 'k'.
-
-    Returns:
-        str: "fahrenheit" o "kelvin", según la opción seleccionada.
-    """
+    """Solicita y valida la escala de destino para la conversión."""
     while True: 
         escala_destino = input("¿A qué escala deseas convertir?, escribe 'f' para Fahrenheit o 'k' para Kelvin: ").lower()
 
@@ -52,15 +43,7 @@ def seleccionar_escala_destino() -> str:
                 continue
 
 def convertir_temperatura(temperatura_celsius: float, escala_destino: str) -> float:
-    """Convierte una temperatura de Celsius a Fahrenheit o kelvin.
-
-    Args:
-        temperatura_celsius (float): Temperatura en grados Celsius.
-        escala_destino (str): "fahrenheit" o "kelvin".
-
-    Returns:
-        float: Temperatura convertida a la escala seleccionada.
-    """
+    """Convierte una temperatura de Celsius a Fahrenheit o kelvin."""
     match escala_destino:
         case "fahrenheit":
             return temperatura_celsius * (9 / 5) + 32

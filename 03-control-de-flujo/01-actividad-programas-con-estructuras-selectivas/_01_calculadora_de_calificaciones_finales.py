@@ -12,14 +12,7 @@ PORCENTAJE_PROYECTO = 30
 PORCENTAJE_EXAMEN_FINAL = 30
 
 def validar_calificacion(evaluacion: str) -> int:
-    """Solicita una calificación hasta obtener un número entero entre 0 y 100.
-
-    Args:
-        evaluacion: Nombre de la evaluación cuya calificación se solicita.
-
-    Returns:
-        Calificación validada, número entero entre 0 y 100, ambos incluidos.
-    """
+    """Solicita una calificación hasta obtener un número entero entre 0 y 100."""
     while True:
         try: 
             calificacion = int(
