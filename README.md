@@ -19,7 +19,7 @@ Repositorio de la asignatura **Fundamentos de Programación** de la carrera de I
 
 ## 📚 Temario
 
-### 2. Introducción a la programación
+### 2. Introducción a la programación 🎃🧟‍♀️
 
 - **2.1** Conceptos básicos.
 - **2.2** Características del lenguaje de programación.
@@ -27,20 +27,20 @@ Repositorio de la asignatura **Fundamentos de Programación** de la carrera de I
 - **2.4** Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos.
 - **2.5** Traducción de un programa: compilación, enlace, ejecución y errores.
 
-### 3. Control de flujo
+### 3. Control de flujo 🎃👻
 
 - **3.1** Estructuras secuenciales.
 - **3.2** Estructuras selectivas: simple, doble y múltiple.
 - **3.3** Estructuras iterativas: repetir mientras, hasta y desde.
 
-### 4. Organización de datos
+### 4. Organización de datos ❄️☃️
 
 - **4.1** Arreglos.
 - **4.2** Arreglos unidimensionales: conceptos básicos, operaciones y aplicaciones.
 - **4.3** Arreglos multidimensionales: conceptos básicos, operaciones y aplicaciones.
 - **4.4** Estructuras o registros.
 
-### 5. Modularidad
+### 5. Modularidad ❄️🎄
 
 - **5.1** Declaración y uso de módulos.
 - **5.2** Paso de parámetros o argumentos.
