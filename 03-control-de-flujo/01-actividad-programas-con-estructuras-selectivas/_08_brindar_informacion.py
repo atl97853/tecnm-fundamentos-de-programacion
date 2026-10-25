@@ -71,9 +71,39 @@ Protagonista: Tanya Degurechaff
 Próximo lanzamiento: Desconocido.
 """
 
+def obtener_informacion_novela(titulo: str) -> str | None:
+    """Devuelve la información de la novela o None si el título no existe."""
+    match titulo.casefold():
+        case "mushoku tensei":
+            return INFORMACION_MUSHOKU_TENSEI
+        case "secrets of the silent witch":
+            return INFORMACION_SILENT_WITCH
+        case "ascendance of a bookworm":
+            return INFORMACION_BOOKWORM
+        case "violet evergarden":
+            return INFORMACION_VIOLET_EVERGARDEN
+        case "the saga of tanya the evil":
+            return INFORMACION_TANYA
+        case _:
+            return None
+
 def main() -> None:
     """Solicita un título válido y muestra la información de la novela."""
-    print(MENU_NOVELAS)
+    while True:
+        print(MENU_NOVELAS)
+        # Entrada
+        titulo = input("Escribe el título de la novela: ").strip()
+
+        # Proceso
+        informacion = obtener_informacion_novela(titulo)
+
+        if informacion is None:
+            print("Título no válido. Escribe uno de los títulos del menú.\n")
+            continue
+
+        # Salida
+        print(f"\n{informacion}")
+        break
 
 # Bloque principal
 if __name__ == "__main__":
