@@ -1,7 +1,7 @@
 """
-Programa: Cálculo del factorial
+Programa: Factorial de un número
 Autor: Atl
-Fecha: Octubre de 2026
+Fecha: Octubre, 2026
 Descripción: Solicita un número entero no negativo, calcula su factorial
 mediante un proceso iterativo y muestra el resultado en la terminal.
 """
