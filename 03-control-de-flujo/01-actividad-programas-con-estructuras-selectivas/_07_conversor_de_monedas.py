@@ -21,7 +21,7 @@ ARS = 81.680564
 
 MENU_MONEDAS = """[1] Dólar (USD)
 [2] Euro (EUR)
-[3] Bath (THB)
+[3] Baht (THB)
 [4] Yen (JPY)
 [5] Won (KRW)
 [6] Dólar Australiano (AUD)
