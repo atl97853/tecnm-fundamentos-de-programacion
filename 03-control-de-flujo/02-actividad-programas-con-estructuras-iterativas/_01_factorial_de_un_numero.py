@@ -8,11 +8,26 @@ mediante un proceso iterativo y muestra el resultado en la terminal.
 
 def solicitar_entero_no_negativo() -> int:
     """Solicita un entero no negativo y repite la petición hasta obtenerlo."""
-    raise NotImplementedError("Pendiente: solicitar y validar la entrada.")
+    while True:
+        try:
+            numero = int(input("Ingresa un número entero mayor o igual a cero: "))
+        except ValueError:
+            print("Por favor, ingresa un número valido.")
+            continue
+
+        if numero >= 0:
+            return numero
+        print("Por favor, ingresa un numero entero mayor o igual a cero.")
 
 def calcular_factorial_iterativo(numero: int) -> int:
-    """Calcula el factorial de un entero no negativo mediante iteración."""
-    raise NotImplementedError("Pendiente: implementar el cálculo iterativo.")
+    """Calcula el factorial de un entero no negativo."""
+    producto = 1
+
+    # Para 0 y 1, el rango está vacío y producto permanece en 1.
+    for factor in range(2, numero + 1):
+        producto = factor * producto
+
+    return producto
 
 def main() -> None:
     """Solicita un entero no negativo y muestra su factorial."""
