@@ -1,7 +1,8 @@
 """
 Programa: Contador de dígitos
 Autor: Atl
-Fecha: Solicita un número entero, cuenta los dígitos de su
+Fecha: Octubre, 2026 
+Descripción: Solicita un número entero, cuenta los dígitos de su
 representación decimal sin incluir el signo y muestra la cantidad.
 """
 
