@@ -29,8 +29,17 @@ def seleccionar_operacion() -> str:
         else: 
             print("Operación no válida. Ingresa +, -, * o /.")
 
-def calculadora(primer_numero, segundo_numero, operacion) -> float:
-    return 0
+def calculadora(primer_numero: int, segundo_numero: int, operacion: str) -> float:
+    """Calcula el resultado de la operación indicada."""
+    match operacion:
+        case "+":
+            return primer_numero + segundo_numero
+        case "-":
+            return primer_numero - segundo_numero
+        case "*":
+            return primer_numero * segundo_numero
+        case "/":
+            return primer_numero / segundo_numero
 
 def main() -> None:
     """Ejecuta la calculadora hasta que el usuario decida salir presionando 'q'."""
