@@ -7,8 +7,15 @@ aritmética, muestra el resultado y permite repetir hasta que
 el usuario presione 'q' para salir.
 """
 
-def solicitar_numero() -> float:
-    return 0
+def solicitar_numero(mensaje: str) -> float:
+    """Solicita un número hasta que el usuario ingrese uno válido."""
+    while True: 
+        entrada = input(mensaje).strip()
+
+        try:
+            return float(entrada)
+        except ValueError:
+            print("Por favor, ingresa un número válido.")
 
 def seleccionar_operacion() -> str:
     return " "
@@ -21,8 +28,8 @@ def main() -> None:
 
     while True: 
         # Entrada
-        primer_numero = solicitar_numero()
-        segundo_numero = solicitar_numero()
+        primer_numero = solicitar_numero("Ingresa tu primero número: ")
+        segundo_numero = solicitar_numero("Ingresa tu segundo número: ")
         operacion = seleccionar_operacion()
 
         # Proceso
