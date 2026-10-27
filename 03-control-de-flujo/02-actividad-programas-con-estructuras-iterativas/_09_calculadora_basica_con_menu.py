@@ -7,6 +7,8 @@ aritmética, muestra el resultado y permite repetir hasta que
 el usuario presione 'q' para salir.
 """
 
+import re
+
 def solicitar_numero(mensaje: str) -> float:
     """Solicita un número hasta que el usuario ingrese uno válido."""
     while True: 
@@ -17,7 +19,15 @@ def solicitar_numero(mensaje: str) -> float:
             continue
 
 def seleccionar_operacion() -> str:
-    return " "
+    """Solicita y devuelve un símbolo de operación válido."""
+    while True: 
+        operacion = input("Elige una operación ('+', '-', '*', '/'): ").strip()
+        patron = r"^[+*/-]$"
+
+        if re.fullmatch(patron, operacion):
+            return operacion
+        else: 
+            print("Operación no válida. Ingresa +, -, * o /.")
 
 def calculadora(primer_numero, segundo_numero, operacion) -> float:
     return 0
