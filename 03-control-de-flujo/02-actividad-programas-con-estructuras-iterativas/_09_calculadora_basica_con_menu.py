@@ -10,12 +10,11 @@ el usuario presione 'q' para salir.
 def solicitar_numero(mensaje: str) -> float:
     """Solicita un número hasta que el usuario ingrese uno válido."""
     while True: 
-        entrada = input(mensaje).strip()
-
-        try:
-            return float(entrada)
+        try: 
+            return float(input(mensaje))
         except ValueError:
             print("Por favor, ingresa un número válido.")
+            continue
 
 def seleccionar_operacion() -> str:
     return " "
