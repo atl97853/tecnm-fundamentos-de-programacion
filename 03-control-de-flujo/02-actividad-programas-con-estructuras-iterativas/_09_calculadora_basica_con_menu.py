@@ -46,12 +46,16 @@ def main() -> None:
 
     while True: 
         # Entrada
-        primer_numero = solicitar_numero("Ingresa tu primero número: ")
-        segundo_numero = solicitar_numero("Ingresa tu segundo número: ")
+        primer_numero = solicitar_numero("Ingresa tu primer número: ")
         operacion = seleccionar_operacion()
+        segundo_numero = solicitar_numero("Ingresa tu segundo número: ")
 
         # Proceso
-        resultado = calculadora(primer_numero, segundo_numero, operacion)
+        try: 
+            resultado = calculadora(primer_numero, segundo_numero, operacion)
+        except ZeroDivisionError:
+            print("No se puede dividir entre cero. Intenta de nuevo.")
+            continue
 
         # Salida
         print(
