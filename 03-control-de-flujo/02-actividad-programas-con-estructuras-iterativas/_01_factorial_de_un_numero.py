@@ -17,7 +17,8 @@ def solicitar_entero_no_negativo() -> int:
 
         if numero >= 0:
             return numero
-        print("Por favor, ingresa un numero entero mayor o igual a cero.")
+        else:
+            print("Por favor, ingresa un numero entero mayor o igual a cero.")
 
 def calcular_factorial_iterativo(numero: int) -> int:
     """Calcula el factorial de un entero no negativo."""
