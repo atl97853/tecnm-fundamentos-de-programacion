@@ -1,4 +1,5 @@
-"""Generar una secuencia aritmética (con do-while simulado)
+"""
+Generar una secuencia aritmética (con do-while simulado)
 Autor: Atl
 Fecha: Octubre, 2026
 Descripción: Solicita el primer término, la diferencia común y un valor
