@@ -16,7 +16,6 @@ def solicitar_numero(mensaje: str) -> float:
             return float(input(mensaje))
         except ValueError:
             print("Por favor, ingresa un número válido.")
-            continue
 
 def seleccionar_operacion() -> str:
     """Solicita y devuelve un símbolo de operación válido."""
