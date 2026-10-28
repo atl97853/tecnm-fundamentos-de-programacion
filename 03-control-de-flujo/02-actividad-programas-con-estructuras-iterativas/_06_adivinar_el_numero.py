@@ -15,18 +15,15 @@ NUMERO_MAXIMO = 100
 def solicitar_intento() -> int:
     """Solicita un intento y repite la petición hasta obtener uno válido."""
     while True:
-        entrada = input(
-            f"Ingresa tu intento (un entero del {NUMERO_MINIMO} "
-            f"al {NUMERO_MAXIMO}): "
-        )
-
-        try:
-            intento = int(entrada)
+        try: 
+            return int(
+                input(
+                    f"Ingresa tu intento (un entero del {NUMERO_MINIMO} "
+                    f"al {NUMERO_MAXIMO}): "
+                )
+            )
         except ValueError:
             print("Entrada no válida. Ingresa un número entero.")
-            continue
-
-        return intento
 
 def evaluar_intento(intento: int, numero_secreto: int) -> str:
     """Devuelve un mensaje indicando si el intento es demasiado bajo, demasiado alto o correcto."""
