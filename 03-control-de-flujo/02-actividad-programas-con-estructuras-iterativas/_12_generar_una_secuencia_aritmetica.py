@@ -8,7 +8,11 @@ un bucle do-while simulado.
 
 def solicitar_entero(mensaje: str) -> int:
     """Solicita un intento y repite la petición hasta obtener uno válido."""
-    return 0 # Pendiente de implementar
+    while True: 
+        try:
+            return int(input(mensaje))
+        except ValueError:
+            print("Entrada no válida. Ingresa un número entero.")
 
 def mostrar_secuencia_aritmetica(primer_termino: int, diferencia_comun: int, valor_maximo: int) -> None:
     """Muestra los términos de la secuencia hasta el valor máximo."""
