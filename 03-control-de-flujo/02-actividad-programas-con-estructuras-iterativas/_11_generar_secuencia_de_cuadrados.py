@@ -17,8 +17,8 @@ def solicitar_entero_positivo() -> int:
 
         if numero > 0:
             return numero
-
-        print("El número debe ser mayor que cero.")
+        else: 
+            print("El número debe ser mayor que cero.")
 
 def calcular_cuadrado(numero: int) -> int:
     """Devuelve el cuadrado del número recibido."""
