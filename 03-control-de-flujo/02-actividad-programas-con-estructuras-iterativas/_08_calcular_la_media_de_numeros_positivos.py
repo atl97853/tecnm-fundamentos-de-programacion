@@ -23,9 +23,8 @@ def solicitar_numero() -> float:
 
         if math.isfinite(numero):
             return numero
-
-        print("Entrada no válida. Ingresa un número finito.")
-
+        else: 
+            print("Entrada no válida. Ingresa un número finito.")
 
 def calcular_media(suma: float, cantidad: int) -> float | None:
     """Calcula la media a partir de una suma y su cantidad de valores.
@@ -41,7 +40,6 @@ def calcular_media(suma: float, cantidad: int) -> float | None:
         return None
 
     return suma / cantidad
-
 
 def main() -> None:
     """Solicita números y muestra la media de los positivos al terminar."""
