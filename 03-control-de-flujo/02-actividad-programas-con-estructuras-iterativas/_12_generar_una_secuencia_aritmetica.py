@@ -37,7 +37,14 @@ def main() -> None:
 
     # Entrada
     primer_termino = solicitar_entero("Ingresa el primer término: ")
-    diferencia_comun = solicitar_entero("Ingresa la diferencia común: ")
+
+    while True:
+        diferencia_comun = solicitar_entero("Ingresa la diferencia común: ")
+
+        if diferencia_comun > 0:
+            break
+        else:
+            print("La diferencia común debe ser mayor que cero. Intenta de nuevo.")
 
     while True: 
         valor_maximo = solicitar_entero("Ingresa el valor máximo: ")
