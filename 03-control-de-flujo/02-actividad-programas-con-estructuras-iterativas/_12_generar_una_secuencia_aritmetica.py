@@ -15,10 +15,22 @@ def solicitar_entero(mensaje: str) -> int:
         except ValueError:
             print("Entrada no válida. Ingresa un número entero.")
 
+def calcular_siguiente_termino(termino_actual: int, diferencia_comun: int) -> int:
+    """Devuelve el siguiente término de la secuencia aritmética."""
+    return termino_actual + diferencia_comun
+
 def mostrar_secuencia_aritmetica(primer_termino: int, diferencia_comun: int, valor_maximo: int) -> None:
     """Muestra los términos de la secuencia hasta el valor máximo."""
-    pass  # Pendiente de implementar
+    numero_actual = primer_termino
 
+    while True: 
+        print(numero_actual)
+        numero_actual = calcular_siguiente_termino(numero_actual, diferencia_comun)
+
+        # El término actual ya se imprimió. Si el siguiente supera el máximo,
+        # termina el ciclo; si es menor o igual, se imprimirá en la próxima vuelta.
+        if numero_actual > valor_maximo:
+            break
 
 def main() -> None:
     """Solicita los datos y muestra la secuencia aritmética."""
