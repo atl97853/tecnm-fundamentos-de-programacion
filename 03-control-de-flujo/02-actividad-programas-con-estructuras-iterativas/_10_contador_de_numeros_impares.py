@@ -17,8 +17,8 @@ def solicitar_entero_positivo() -> int:
 
         if numero > 0:
             return numero
-
-        print("El número debe ser mayor que cero.")
+        else: 
+            print("El número debe ser mayor que cero.")
 
 def mostrar_impares_hasta(limite: int) -> None:
     """Muestra los números impares desde 1 hasta el límite, inclusive."""
