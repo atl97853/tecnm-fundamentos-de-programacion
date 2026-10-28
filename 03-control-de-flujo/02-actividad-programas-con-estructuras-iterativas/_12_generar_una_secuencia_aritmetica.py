@@ -8,7 +8,7 @@ un bucle do-while simulado.
 """
 
 def solicitar_entero(mensaje: str) -> int:
-    """Solicita un intento y repite la petición hasta obtener uno válido."""
+    """Solicita un número entero y repite la petición hasta obtener uno válido."""
     while True: 
         try:
             return int(input(mensaje))
