@@ -37,7 +37,7 @@ def contar_digitos(numero: int) -> int:
 
     while numero > 0:
         conteo_digitos += 1
-        numero = numero / 10 # elimina el último dígito decimal
+        numero //= 10 # elimina el último dígito decimal
 
     return conteo_digitos
 
