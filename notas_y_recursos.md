@@ -13,9 +13,9 @@ In **Python 3.10 and newer**, both **if-else chains** and **match-case statement
 
 **📚 References**
 
-- [https://www.geeksforgeeks.org/python/python-match-case-statement/](https://www.geeksforgeeks.org/python/python-match-case-statement/)
-- [https://docs.python.org/3/tutorial/controlflow.html#match-statements](https://docs.python.org/3/tutorial/controlflow.html#match-statements)
-- [https://www.w3schools.com/python/python_match.asp](https://www.w3schools.com/python/python_match.asp)
+- GeeksforGeeks. (2026, June 19). Python match case statement. https://www.geeksforgeeks.org/python/python-match-case-statement/ GeeksforGeeks
+- Python Software Foundation. (n.d.). More control flow tools. Python documentation. https://docs.python.org/3/tutorial/controlflow.html#match-statements Python 3.15.2 documentation
+- W3Schools. (n.d.). Python match. https://www.w3schools.com/python/python_match.asp w3schools.com
 
 ## 🎃 `continue` and `break` keywords
 
@@ -34,9 +34,9 @@ Use consistent indentation of two or four spaces for section contents. A **one-l
 
 **📚 References**
 
-- [Sphinx — Docstring format](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html#the-sphinx-docstring-format)
-- [Google Python Style Guide — Comments and docstrings](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
-- [numpydoc — Docstring standard](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard)
+- Writing docstrings. (n.d.). Sphinx-RTD-Tutorial. https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html#the-sphinx-docstring-format Sphinx-RTD-Tutorial documentation
+- Google. (n.d.). Google Python style guide. https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings google.github.io
+- numpydoc maintainers. (n.d.). Style guide. numpydoc. https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
 
 ## 🎃 Designing Functions
 
@@ -67,7 +67,7 @@ These guidelines improve readability, reduce opportunities for errors, and often
 
 **📚 Reference**
 
-DeNero, J. (n.d.). *1.4 Designing functions*. Composing Programs. [https://composingprograms.com/3ed/designing-functions/](https://composingprograms.com/3ed/designing-functions/)
+- DeNero, J. (n.d.). *1.4 Designing functions*. Composing Programs. [https://composingprograms.com/3ed/designing-functions/](https://composingprograms.com/3ed/designing-functions/)
 
 ## 🎃 Input Validation Patterns in Python
 
@@ -129,6 +129,5 @@ Both examples repeat the request after invalid input and return the value after 
 
 **📚 References**
 
-GeeksforGeeks. (2026, September 22). *Input validation in Python*. [https://www.geeksforgeeks.org/python/input-validation-in-python/](https://www.geeksforgeeks.org/python/input-validation-in-python/)
-
-Python Software Foundation. (n.d.). *re — Regular expression operations*. Python documentation. [https://docs.python.org/3/library/re.html#re.fullmatch](https://docs.python.org/3/library/re.html#re.fullmatch)
+- GeeksforGeeks. (2026, September 22). *Input validation in Python*. [https://www.geeksforgeeks.org/python/input-validation-in-python/](https://www.geeksforgeeks.org/python/input-validation-in-python/)
+- Python Software Foundation. (n.d.). *re — Regular expression operations*. Python documentation. [https://docs.python.org/3/library/re.html#re.fullmatch](https://docs.python.org/3/library/re.html#re.fullmatch)
