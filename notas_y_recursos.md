@@ -76,7 +76,7 @@ These guidelines improve readability, reduce opportunities for errors, and often
 | Validation type | Technique | What it checks | Example |
 | --- | --- | --- | --- |
 | **Type/conversion** | `try-except ValueError` | Whether input can be converted to the required type. | `int(entrada)` accepts `"12"` but rejects `"hola"`. |
-| **Range** | `if-else` statements | Whether a numeric value falls within allowed bounds. | `0 <= edad <= 120`. |
+| **Range** | `if` statements | Whether a numeric value falls within allowed bounds. | `0 <= edad <= 120`. |
 | **Format** | Regular expressions | Whether text follows a specified pattern, such as an email format. | `re.fullmatch(r"[0-9]{2}", entrada)` requires exactly two digits. |
 
 **Combining validation types**
@@ -131,3 +131,42 @@ Both examples repeat the request after invalid input and return the value after 
 
 - GeeksforGeeks. (2026, September 22). *Input validation in Python*. [https://www.geeksforgeeks.org/python/input-validation-in-python/](https://www.geeksforgeeks.org/python/input-validation-in-python/)
 - Python Software Foundation. (n.d.). *re — Regular expression operations*. Python documentation. [https://docs.python.org/3/library/re.html#re.fullmatch](https://docs.python.org/3/library/re.html#re.fullmatch)
+
+## 🎃 Simulating a `do-while` Loop in Python
+
+A `do-while` loop executes its body **at least once**, then checks whether to repeat. Python has no dedicated `do-while` statement, but this behavior can be expressed using `while True` and a conditional `break` at the end.
+
+```python
+while True:
+    # Perform the repeated work.
+
+    if condicion_de_salida:
+        break
+```
+
+- **`while True`** allows the loop to keep repeating.
+- **`if condicion_de_salida`** checks whether to stop after performing the work.
+- **`break`** exits the loop when that condition is true.
+
+A `do-while` condition describes when to **continue**; the condition before `break` describes when to **stop**.
+
+**Example: requesting a nonempty name**
+
+```python
+while True:
+    nombre = input("Ingresa tu nombre: ").strip()
+
+    if nombre != "":
+        break
+
+    print("El nombre no puede estar vacío.")
+```
+
+The program requests a name at least once and repeats until the input is nonempty.
+
+> **Connection to input validation:** Your validation functions use the same idea: request input, check it, and repeat if invalid. `break` exits the loop; `return` exits the entire function and returns the validated value.
+
+**📚 References**
+
+- Tecnológico Nacional de México. (2026). Fundamentos de programación (AED-1285-2026B) [Material del curso].
+- Python Software Foundation. (n.d.). *Compound statements*. Python documentation. https://docs.python.org/3/reference/compound_stmts.html#the-while-statement
