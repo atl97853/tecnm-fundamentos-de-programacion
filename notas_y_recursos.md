@@ -68,3 +68,67 @@ These guidelines improve readability, reduce opportunities for errors, and often
 **📚 Reference**
 
 DeNero, J. (n.d.). *1.4 Designing functions*. Composing Programs. [https://composingprograms.com/3ed/designing-functions/](https://composingprograms.com/3ed/designing-functions/)
+
+## 🎃 Input Validation Patterns in Python
+
+**Input validation** checks whether user input meets a program’s requirements.
+
+| Validation type | Technique | What it checks | Example |
+| --- | --- | --- | --- |
+| **Type/conversion** | `try-except ValueError` | Whether input can be converted to the required type. | `int(entrada)` accepts `"12"` but rejects `"hola"`. |
+| **Range** | `if-else` statements | Whether a numeric value falls within allowed bounds. | `0 <= edad <= 120`. |
+| **Format** | Regular expressions | Whether text follows a specified pattern, such as an email format. | `re.fullmatch(r"[0-9]{2}", entrada)` requires exactly two digits. |
+
+**Combining validation types**
+
+**1. Type/conversion + range:** convert the input to an integer, then check that it is nonnegative.
+
+```python
+def solicitar_entero_no_negativo(mensaje: str) -> int:
+    """Solicita un entero mayor o igual a cero."""
+    while True:
+        try:
+            numero = int(input(mensaje))
+        except ValueError:
+            print("Ingresa un número entero.")
+            continue
+
+        if numero >= 0:
+            return numero
+
+        print("El número debe ser mayor o igual a cero.")
+```
+
+**2. Format + range:** validate a time entered in 24-hour `HH:MM` format, such as an appointment time.
+
+```python
+import re
+
+
+def solicitar_hora() -> str:
+    """Solicita una hora válida en formato HH:MM de 24 horas."""
+    while True:
+        entrada = input("Ingresa la hora (HH:MM): ").strip()
+
+        if not re.fullmatch(r"[0-9]{2}:[0-9]{2}", entrada):
+            print("Usa el formato HH:MM, por ejemplo, 09:30.")
+            continue
+
+        hora = int(entrada[:2])
+        minuto = int(entrada[3:])
+
+        if 0 <= hora <= 23 and 0 <= minuto <= 59:
+            return entrada
+
+        print("La hora debe ser de 00 a 23 y los minutos de 00 a 59.")
+```
+
+Here, `"9:30"` fails the format check, `"25:70"` fails the range checks, and `"09:30"` is accepted. `re.fullmatch()` checks the entire string; `.strip()` removes surrounding whitespace before validation.
+
+Both examples repeat the request after invalid input and return the value after all checks pass.
+
+**📚 References**
+
+GeeksforGeeks. (2026, September 22). *Input validation in Python*. [https://www.geeksforgeeks.org/python/input-validation-in-python/](https://www.geeksforgeeks.org/python/input-validation-in-python/)
+
+Python Software Foundation. (n.d.). *re — Regular expression operations*. Python documentation. [https://docs.python.org/3/library/re.html#re.fullmatch](https://docs.python.org/3/library/re.html#re.fullmatch)
