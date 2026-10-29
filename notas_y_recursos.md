@@ -192,3 +192,60 @@ The recursion limit is **configurable**. Use `sys.getrecursionlimit()` to inspec
 - SICP — [1.2.1 Linear Recursion and Iteration](https://sicp.sourceacademy.org/chapters/1.2.1.html).
 - Python Software Foundation. (n.d.). *sys—System-specific parameters and functions*. Python documentation. https://docs.python.org/3/library/sys.html#sys.getrecursionlimit
 - Python Software Foundation. (n.d.). *What’s new in Python 3.14*. Python documentation. https://docs.python.org/3/whatsnew/3.14.html#tail-call-interpreter
+
+## 🎃 Nested `for` Loops
+
+A **nested loop** is a loop inside another loop. The inner loop runs again for **each iteration of the outer loop**.
+
+```python
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+```
+
+The outer loop runs **3 times**, and the inner loop runs **2 times per outer iteration**. Therefore, `print()` executes **3 × 2 = 6 times**.
+
+To count executions of the innermost body:
+
+- **Multiply** when the inner loop always runs the same number of times.
+- **Add** when its count changes. For example, inner counts of 1, 2, 3, 4, and 5 give **15 executions**.
+
+Remember: `range()` excludes its stop value, so `range(1, 6)` produces **5 iterations**.
+
+**📚 Reference**
+
+Tecnológico Nacional de México. (2026). *Fundamentos de programación (AED-1285-2026B)* [Material del curso].
+
+## 🎃 How `range()` works
+
+`range()` provides a sequence of integers, commonly used to control a `for` loop.
+
+```python
+range(start, stop, step)
+```
+
+- **`start`**: the starting value; defaults to `0`.
+- **`stop`**: the stopping boundary; **never included**.
+- **`step`**: the difference between consecutive values; defaults to `1` and cannot be `0`.
+
+```python
+range(4)         # 0, 1, 2, 3       → 4 iterations
+range(1, 5)      # 1, 2, 3, 4       → 4 iterations
+range(1, 6, 2)   # 1, 3, 5          → 3 iterations
+range(5, 0, -1)  # 5, 4, 3, 2, 1    → 5 iterations
+```
+
+With one argument, that argument is `stop`. With two, they are `start` and `stop`. A negative `step` counts downward.
+
+The loop takes one value per iteration:
+
+```python
+for numero in range(1, 6, 2):
+    print(numero)
+```
+
+This prints `1`, `3`, and `5`, so the body executes **3 times**. You can check the count using `len(range(1, 6, 2))`, which returns `3`.
+
+**📚 Reference**
+
+W3Schools. (n.d.). *Python range() function*. https://www.w3schools.com/python/ref_func_range.asp
