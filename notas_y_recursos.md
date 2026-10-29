@@ -164,9 +164,31 @@ while True:
 
 The program requests a name at least once and repeats until the input is nonempty.
 
-> **Connection to input validation:** Your validation functions use the same idea: request input, check it, and repeat if invalid. `break` exits the loop; `return` exits the entire function and returns the validated value.
+> **Connection to input validation:** validation functions use the same idea: request input, check it, and repeat if invalid. `break` exits the loop; `return` exits the entire function and returns the validated value.
 
 **📚 References**
 
 - Tecnológico Nacional de México. (2026). Fundamentos de programación (AED-1285-2026B) [Material del curso].
 - Python Software Foundation. (n.d.). *Compound statements*. Python documentation. https://docs.python.org/3/reference/compound_stmts.html#the-while-statement
+
+## 🎃 `while` Loops vs. Tail-Recursive Functions in Python
+
+A **tail-recursive function** makes its recursive calls in **tail position**: their results are returned without further computation. Using a fixed collection of state variables, it can describe an **iterative process in principle**, as explained in SICP. However, **CPython does not implement tail-call optimization**, so active recursive calls still accumulate frames, causing memory usage to grow with recursion depth.
+
+The comparison below assumes equivalent computations with **n constant-time steps and fixed-size state**.
+
+| Aspect | `while` loop | Tail-recursive function in CPython | Why the difference exists |
+| --- | --- | --- | --- |
+| **Control-stack space** | O(1): constant. | O(n): linear. | A loop updates state within the same function call; recursion retains a frame for each active call. |
+| **Execution time** | O(n), usually with lower overhead. | O(n), usually with higher overhead. | Recursive steps require additional function calls. The exact speed difference depends on the implementation. |
+| **Limitations** | Can run indefinitely if its stopping condition is never reached. | Can raise `RecursionError` when the recursion limit is exceeded. | Loops have no recursion-depth limit; recursive calls are subject to the interpreter’s configured limit. |
+
+The recursion limit is **configurable**. Use `sys.getrecursionlimit()` to inspect it.
+
+> **Practical note:** For repeated state updates, a loop usually uses less memory in CPython. The space comparison above concerns call frames; stored data may require additional memory.
+
+**📚 References**
+
+- SICP — [1.2.1 Linear Recursion and Iteration](https://sicp.sourceacademy.org/chapters/1.2.1.html).
+- Python Software Foundation. (n.d.). *sys—System-specific parameters and functions*. Python documentation. https://docs.python.org/3/library/sys.html#sys.getrecursionlimit
+- Python Software Foundation. (n.d.). *What’s new in Python 3.14*. Python documentation. https://docs.python.org/3/whatsnew/3.14.html#tail-call-interpreter
